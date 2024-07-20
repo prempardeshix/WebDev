@@ -4,7 +4,7 @@ import { Client } from "pg";
 
 const client = new Client({
   connectionString:
-    "postgresql://prempardeshi283:QBb9DdE8ZKhN@ep-little-meadow-a5vcluux.us-east-2.aws.neon.tech/neondb?sslmode=require",
+    "postgresql://",
 });
 
 // async function createUsersTable() {
