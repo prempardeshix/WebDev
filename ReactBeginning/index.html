@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+  <head> </head>
+
+  <body>
+    <input type="text" id="title" placeholder="Todo title" /> <br /><br />
+    <input
+      type="text"
+      id="description"
+      placeholder="Todo description"
+    /><br /><br />
+
+    <div id="todos"></div>
+  </body>
+
+  <script>
+    async function adder() {
+      const response = await fetch("https://sum-server.100xdevs.com/todos");
+      const data = await response.json();
+      const todos = document.querySelector("#todos");
+      todos.innerHTML = "";
+      const state = data.todos;
+      for (i = 0; i < state.length; i++) {
+        const child = createChild(
+          state[i].title,
+          state[i].description,
+          state[i].id
+        );
+        todos.appendChild(child);
+      }
+    }
+
+    function createChild(title, description, id) {
+      const child = document.createElement("div");
+      const firstGrandParent = document.createElement("div");
+      firstGrandParent.innerHTML = title;
+      const secondGrandParent = document.createElement("div");
+      secondGrandParent.innerHTML = description;
+      const thirdGrandParent = document.createElement("button");
+      thirdGrandParent.innerHTML = "Mark as done";
+      thirdGrandParent.setAttribute("onclick", `markAsDone(${id})`);
+      child.appendChild(firstGrandParent);
+      child.appendChild(secondGrandParent);
+      child.appendChild(thirdGrandParent);
+      child.setAttribute("id", id);
+      return child;
+    }
+
+    window.setInterval(adder, 1000);
+  </script>
+</html>

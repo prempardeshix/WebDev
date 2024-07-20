@@ -1,0 +1,6 @@
+const { atom } = require("recoil");
+
+const jobsAtom = atom({
+  key: "jobsAtom",
+  default: 0,
+});
