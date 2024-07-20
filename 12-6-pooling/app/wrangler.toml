@@ -12,7 +12,7 @@ compatibility_flags = ["nodejs_compat"]
 # mode = "smart"
 
 [vars   ]
-DATABASE_URL="prisma://accelerate.prisma-data.net/?api_key=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJhcGlfa2V5IjoiNDIzOTQ2NjMtNjJjYi00OTM2LWFlY2EtMzZjMDYwNTVhMDQ4IiwidGVuYW50X2lkIjoiNmYyYTM0ZmFmMjM5N2M4MTliYmY0MjM5ODZjZjYxNmMwMWNjZTQxZDJkM2RkZTYzODA0OGMxN2QwZmM1NzllOCIsImludGVybmFsX3NlY3JldCI6ImEyY2M3NjBjLWM4OTAtNDk1ZC04YzYwLTUwNzdlNzc5YTBmYyJ9.ibGV4SdpRJMfUS7fGqInItgujlo5SOxS2k3CEhBmyoA"
+DATABASE_URL=""
 
 # Variable bindings. These are arbitrary, plaintext strings (similar to environment variables)
 # Docs:
